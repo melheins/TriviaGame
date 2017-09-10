@@ -1,15 +1,21 @@
 $(document).ready(function () {
 
-    /* INITIAL LOAD */
+    /* INITIAL LOAD SETUP*/
 
     //Hide sections on initial load
     $(".score").hide();
     $(".timer").hide();
 
-    /* VARIABLES */
+    /* GLOBAL VARIABLES */
 
     //Creates variable to hold the time limit amount
-    var counter = 120;
+    var counter;
+    // Creates variable to hold number of correct answers
+    var correctAnswers = 0;
+    // Creates variable to hold number of wrong answers
+    var incorrectAnswers = 0;
+    // Creates variable to hold number of un-answered questions
+    var unansweredQuestions = 0;
 
     // Creates variable to hold questions
     var questions = [
@@ -21,7 +27,7 @@ $(document).ready(function () {
             "choices": ["Expanse", "Dark Matter", "Continuum"],
             //location of answer in choices array
             "answer": 0,
-            "status": '',
+            "status": ''
         },
         // question 2 - BSG
         {
@@ -31,7 +37,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Dark Matter"],
             //location of answer in choices array
             "answer": 1,
-            "status": '',
+            "status": ''
         },
         // question 3 - Andromeda
         {
@@ -41,7 +47,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Andromeda", "Dark Matter"],
             //location of answer in choices array
             "answer": 1,
-            "status": '',
+            "status": ''
         },
         // question 4 - Continuum
         {
@@ -51,7 +57,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Continuum", "Dark Matter"],
             //location of answer in choices array
             "answer": 1,
-            "status": '',
+            "status": ''
         },
         // question 5 - Dark Matter
         {
@@ -61,7 +67,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Dark Matter"],
             //location of answer in choices array
             "answer": 2,
-            "status": '',
+            "status": ''
         },
         // question 6 - Farscape
         {
@@ -71,7 +77,7 @@ $(document).ready(function () {
             "choices": ["Farscape", "Battlestar Galactica", "Dark Matter"],
             //location of answer in choices array
             "answer": 0,
-            "status": '',
+            "status": ''
         },
         // question 7 - Killjoys
         {
@@ -81,7 +87,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Dark Matter", "Killjoys"],
             //location of answer in choices array
             "answer": 3,
-            "status": '',
+            "status": ''
         },
         // question 8 - SG-1
         {
@@ -91,7 +97,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Dark Matter"],
             //location of answer in choices array
             "answer": 0,
-            "status": '',
+            "status": ''
         },
         // question 9 - Defiance
         {
@@ -101,7 +107,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Defiance"],
             //location of answer in choices array
             "answer": 2,
-            "status": '',
+            "status": ''
         },
         // question 10 - 12 Monkeys
         {
@@ -111,7 +117,7 @@ $(document).ready(function () {
             "choices": ["12 Monkeys", "Battlestar Galactica", "Dark Matter"],
             //location of answer in choices array
             "answer": 0,
-            "status": '',
+            "status": ''
         },
         // question 11 - Alphas
         {
@@ -121,7 +127,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Alphas", "Dark Matter"],
             //location of answer in choices array
             "answer": 1,
-            "status": '',
+            "status": ''
         },
         // question 12 - Haven
         {
@@ -131,7 +137,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Dark Matter", "Haven"],
             //location of answer in choices array
             "answer": 3,
-            "status": '',
+            "status": ''
         },
         // question 13 - Lost Girl
         {
@@ -141,7 +147,7 @@ $(document).ready(function () {
             "choices": ["Lost Girl", "Haven", "Dark Matter"],
             //location of answer in choices array
             "answer": 0,
-            "status": '',
+            "status": ''
         },
         // question 14 - Helix
         {
@@ -151,7 +157,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Helix", "Dark Matter"],
             //location of answer in choices array
             "answer": 1,
-            "status": '',
+            "status": ''
         },
         // question 15 - Sanctuary
         {
@@ -161,7 +167,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Sanctuary"],
             //location of answer in choices array
             "answer": 2,
-            "status": '',
+            "status": ''
         },
         // question 16 - Being Human
         {
@@ -171,7 +177,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Dark Matter", "Being Human"],
             //location of answer in choices array
             "answer": 3,
-            "status": '',
+            "status": ''
         },
         // question 17 - Eureka
         {
@@ -181,7 +187,7 @@ $(document).ready(function () {
             "choices": ["Eureka", "Battlestar Galactica", "Dark Matter"],
             //location of answer in choices array
             "answer": 0,
-            "status": '',
+            "status": ''
         },
         // question 18 - Dominion
         {
@@ -191,7 +197,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Dark Matter", "Dominion"],
             //location of answer in choices array
             "answer": 3,
-            "status": '',
+            "status": ''
         },
         // question 19 - Stargate Atlantis
         {
@@ -201,7 +207,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Stargate Atlantis"],
             //location of answer in choices array
             "answer": 2,
-            "status": '',
+            "status": ''
         },
         // question 20 - The Magicians
         {
@@ -211,7 +217,7 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "The Magicians", "Dark Matter"],
             //location of answer in choices array
             "answer": 1,
-            "status": '',
+            "status": ''
         },
         // question 21 - Warehouse 13
         {
@@ -221,19 +227,9 @@ $(document).ready(function () {
             "choices": ["Stargate SG-1", "Warehouse 13", "Dark Matter"],
             //location of answer in choices array
             "answer": 1,
-            "status": '',
+            "status": ''
         }
     ];
-
-    // Creates variable to hold number of correct answers
-    var correctAnswers = 0;
-    // Creates variable to hold number of wrong answers
-    var incorrectAnswers = 0;
-    // Creates variable to hold number of un-answered questions
-    var unansweredQuestions = 0;
-
-
-    console.log(unansweredQuestions);
 
     /* FUNCTIONS */
 
@@ -301,8 +297,11 @@ $(document).ready(function () {
 
         $(".questions").append(questionOuterDiv);
 
-        //$("#image-holder").html("<img class='show-image img-rounded img-responsive' src=" + questions[qCount].image_loc + ">");
+
         console.log("question creation");
+        $("#question-area").on("click", ".answer", answerSelect);
+
+
     }
 
     // Function that resets the game back to the starting point
@@ -333,21 +332,23 @@ $(document).ready(function () {
     /* TIMER STUFF*/
 
     function timerWrapper() {
+        $(".timer-box").html(timeConverter(counter));
+
         clock = setInterval(countDown, 1000);
 
         function countDown() {
             if (counter === 0) {
                 clearInterval(clock);
                 console.log("timeout");
-                // $(".questions").hide();
-                //  $(".score").show();
+
                 document.querySelector('.correctCnt').innerHTML = correctAnswers;
                 document.querySelector('.incorrectCnt').innerHTML = incorrectAnswers;
                 document.querySelector('.unansweredCnt').innerHTML = unansweredQuestions;
                 unansweredQuestions++;
 
-                // Disable links
-                //$('#question-area').off('click');
+                var questionId = $('.answer-list').attr("questnum");
+                var correctAnswerId = questions[questionId].answer;
+                $('.answer[indexnum=' + correctAnswerId + ']').addClass('list-group-item-success').append("<span class='badge'>Correct Answer</span>");
 
                 setTimeout(nextQuestion, 4000);
             }
@@ -395,33 +396,37 @@ $(document).ready(function () {
 
     /* ON CLICK EVENTS */
 
-    $("#question-area").on("click", ".answer", function () {
+
+    function answerSelect() {
+
+        $('#question-area').off('click');
 
         console.log("test");
-
-        $(this).addClass("active");
 
         var answerId = $(this).attr("indexnum");
         answerId = parseInt(answerId);
 
         var questionId = $(this).parent().attr("questnum");
 
+        var correctAnswerId = questions[questionId].answer;
 
-        if (answerId === questions[questionId].answer) {
+        if (answerId === correctAnswerId) {
+            $(this).addClass("list-group-item-success").append("<span class='badge'>&#10004;</span>");
             correctAnswers++;
-            document.querySelector('.question-text').innerHTML = "CORRECT";
+            //document.querySelector('.question-text').innerHTML = "CORRECT";
         } else {
+            $(this).addClass("list-group-item-danger").append("<span class='badge'>&#10008;</span>");
             incorrectAnswers++;
-            document.querySelector('.question-text').innerHTML = "WRONG";
+            //document.querySelector('.question-text').innerHTML = "WRONG";
             // Highlight Correct Answer
-            // $(this).parent().find(".answer[indexnum='0']").addClass('list-group-item-danger');
+            $('.answer[indexnum=' + correctAnswerId + ']').addClass('list-group-item-success').append("<span class='badge'>Correct Answer</span>");
+
         }
 
         setTimeout(nextQuestion, 3000);
         //nextQuestion();
-    });
 
-
+    }
 
 
     // On Restart Game Button Click
