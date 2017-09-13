@@ -43,7 +43,7 @@ $(document).ready(function () {
         {
             "id": 2,
             "image_loc": "assets/images/3.jpg",
-            "description": "tbd",
+            "description": "Captain Hunt and the crew of the Starship Andromeda set out on a mission to rebuild the Systems Commonwealth 300 years after its fall.",
             "choices": ["Stargate SG-1", "Andromeda", "Dark Matter"],
             //location of answer in choices array
             "answer": 1,
@@ -53,7 +53,7 @@ $(document).ready(function () {
         {
             "id": 3,
             "image_loc": "assets/images/4.jpg",
-            "description": "tbd",
+            "description": "A detective from the year 2077 finds herself trapped in present day Vancouver and searching for ruthless criminals from the future.",
             "choices": ["Stargate SG-1", "Continuum", "Dark Matter"],
             //location of answer in choices array
             "answer": 1,
@@ -63,7 +63,7 @@ $(document).ready(function () {
         {
             "id": 4,
             "image_loc": "assets/images/5.jpg",
-            "description": "tbd",
+            "description": "Six people wake up on a deserted spaceship. They can't remember who they are or what they're doing there. They set off to find answers.",
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Dark Matter"],
             //location of answer in choices array
             "answer": 2,
@@ -73,7 +73,7 @@ $(document).ready(function () {
         {
             "id": 5,
             "image_loc": "assets/images/6.jpg",
-            "description": "tbd",
+            "description": "Thrown into a distant part of the universe, an Earth astronaut finds himself part of a fugitive alien starship crew.",
             "choices": ["Farscape", "Battlestar Galactica", "Dark Matter"],
             //location of answer in choices array
             "answer": 0,
@@ -83,17 +83,17 @@ $(document).ready(function () {
         {
             "id": 6,
             "image_loc": "assets/images/7.jpg",
-            "description": "tbd",
-            "choices": ["Stargate SG-1", "Battlestar Galactica", "Dark Matter", "Killjoys"],
+            "description": "In the Quad, a planetary system on the brink of a bloody interplanetary class war, a fun loving trio of bounty hunters attempt to remain impartial as they chase deadly warrants.",
+            "choices": ["Stargate SG-1", "Battlestar Galactica", "Killjoys"],
             //location of answer in choices array
-            "answer": 3,
+            "answer": 2,
             "status": ''
         },
         // question 8 - SG-1
         {
-            "id": 6,
+            "id": 7,
             "image_loc": "assets/images/8.jpg",
-            "description": "tbd",
+            "description": "A secret military team, SG-1, is formed to explore the recently discovered Stargates.",
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Dark Matter"],
             //location of answer in choices array
             "answer": 0,
@@ -101,9 +101,9 @@ $(document).ready(function () {
         },
         // question 9 - Defiance
         {
-            "id": 6,
+            "id": 8,
             "image_loc": "assets/images/9.jpg",
-            "description": "tbd",
+            "description": "In the year 2046, it's a new Earth - with new rules. Over thirty years after various alien races arrived on Earth, the landscape is completely altered, terraformed nearly beyond recognition.",
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Defiance"],
             //location of answer in choices array
             "answer": 2,
@@ -111,9 +111,9 @@ $(document).ready(function () {
         },
         // question 10 - 12 Monkeys
         {
-            "id": 6,
+            "id": 9,
             "image_loc": "assets/images/10.jpg",
-            "description": "tbd",
+            "description": "Follows the journey of a time traveler from the post-apocalyptic future who appears in present day on a mission to locate and eradicate the source of a deadly plague that will nearly destroy the human race.",
             "choices": ["12 Monkeys", "Battlestar Galactica", "Dark Matter"],
             //location of answer in choices array
             "answer": 0,
@@ -121,9 +121,9 @@ $(document).ready(function () {
         },
         // question 11 - Alphas
         {
-            "id": 6,
+            "id": 10,
             "image_loc": "assets/images/11.jpg",
-            "description": "tbd",
+            "description": "Dr. Lee Rosen leads a team of \"Alphas\", (human beings with enhanced abilities) who investigate the death of a witness in a court case. They soon uncover more than they had bargained for.",
             "choices": ["Stargate SG-1", "Alphas", "Dark Matter"],
             //location of answer in choices array
             "answer": 1,
@@ -131,19 +131,19 @@ $(document).ready(function () {
         },
         // question 12 - Haven
         {
-            "id": 6,
+            "id": 11,
             "image_loc": "assets/images/12.jpg",
-            "description": "tbd",
-            "choices": ["Stargate SG-1", "Battlestar Galactica", "Dark Matter", "Haven"],
+            "description": "Everyone in the coastal town of Haven, Maine has a dormant curse or \"trouble\" that could trigger at any time for any reason. FBI agent Audrey Parker, the sheriff and the town's black sheep must deal with the troubles' deadly effects.",
+            "choices": ["Haven", "Battlestar Galactica", "Dark Matter"],
             //location of answer in choices array
-            "answer": 3,
+            "answer": 0,
             "status": ''
         },
         // question 13 - Lost Girl
         {
-            "id": 6,
+            "id": 12,
             "image_loc": "assets/images/13.jpg",
-            "description": "tbd",
+            "description": "A charismatic woman learns she is a succubus, a supernatural being who feeds off the sexual energy of humans. While trying to find out more about her past, she faces a choice between the light and the dark side of an underworld group of other supernatural beings known as Faes.",
             "choices": ["Lost Girl", "Haven", "Dark Matter"],
             //location of answer in choices array
             "answer": 0,
@@ -151,9 +151,9 @@ $(document).ready(function () {
         },
         // question 14 - Helix
         {
-            "id": 6,
+            "id": 13,
             "image_loc": "assets/images/14.jpg",
-            "description": "tbd",
+            "description": "A team of scientists are thrust into a potentially life-or-death situation when they arrive in the Arctic to secretly investigate what could be an outbreak of a strange disease in a secluded international research facility.",
             "choices": ["Stargate SG-1", "Helix", "Dark Matter"],
             //location of answer in choices array
             "answer": 1,
@@ -161,9 +161,9 @@ $(document).ready(function () {
         },
         // question 15 - Sanctuary
         {
-            "id": 6,
+            "id": 14,
             "image_loc": "assets/images/15.jpg",
-            "description": "tbd",
+            "description": "Stem cells, gene therapy, transplants, and cloning have changed the definition of \"humanity\" in the modern world, but the darker side contains monsters that only few are brave enough to face, because the future lies in their hands.",
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Sanctuary"],
             //location of answer in choices array
             "answer": 2,
@@ -171,19 +171,19 @@ $(document).ready(function () {
         },
         // question 16 - Being Human
         {
-            "id": 6,
+            "id": 15,
             "image_loc": "assets/images/16.jpg",
-            "description": "tbd",
-            "choices": ["Stargate SG-1", "Battlestar Galactica", "Dark Matter", "Being Human"],
+            "description": "A team of scientists are thrust into a potentially life-or-death situation when they arrive in the Arctic to secretly investigate what could be an outbreak of a strange disease in a secluded international research facility.",
+            "choices": ["Stargate SG-1", "Being Human", "Dark Matter"],
             //location of answer in choices array
-            "answer": 3,
+            "answer": 1,
             "status": ''
         },
         // question 17 - Eureka
         {
-            "id": 6,
+            "id": 16,
             "image_loc": "assets/images/17.jpg",
-            "description": "tbd",
+            "description": "A U.S. Marshall becomes the sheriff of a remote cozy little Northwestern town of Eureka where the best minds in the US have secretly been tucked away to build futuristic inventions for the government which often go disastrously wrong.",
             "choices": ["Eureka", "Battlestar Galactica", "Dark Matter"],
             //location of answer in choices array
             "answer": 0,
@@ -191,19 +191,19 @@ $(document).ready(function () {
         },
         // question 18 - Dominion
         {
-            "id": 6,
+            "id": 17,
             "image_loc": "assets/images/18.jpg",
-            "description": "tbd",
-            "choices": ["Stargate SG-1", "Battlestar Galactica", "Dark Matter", "Dominion"],
+            "description": "Follows the perilous journey of a rebellious young soldier who discovers he's the unlikely savior of humanity.",
+            "choices": ["Stargate SG-1", "Battlestar Galactica", "Dominion"],
             //location of answer in choices array
-            "answer": 3,
+            "answer": 2,
             "status": ''
         },
         // question 19 - Stargate Atlantis
         {
-            "id": 6,
+            "id": 18,
             "image_loc": "assets/images/19.jpg",
-            "description": "tbd",
+            "description": "An international team of scientists and military personnel discover a Stargate network in the Pegasus Galaxy and come face-to-face with a new, powerful enemy, The Wraith.",
             "choices": ["Stargate SG-1", "Battlestar Galactica", "Stargate Atlantis"],
             //location of answer in choices array
             "answer": 2,
@@ -211,9 +211,9 @@ $(document).ready(function () {
         },
         // question 20 - The Magicians
         {
-            "id": 6,
+            "id": 19,
             "image_loc": "assets/images/20.jpg",
-            "description": "tbd",
+            "description": "After being recruited to a secretive academy, a group of students discover that the magic they read about as children is very real-and more dangerous than they ever imagined.",
             "choices": ["Stargate SG-1", "The Magicians", "Dark Matter"],
             //location of answer in choices array
             "answer": 1,
@@ -221,9 +221,9 @@ $(document).ready(function () {
         },
         // question 21 - Warehouse 13
         {
-            "id": 6,
+            "id": 20,
             "image_loc": "assets/images/21.jpg",
-            "description": "tbd",
+            "description": "A pair of U.S Secret Service agents are whisked away to a covert location in South Dakota that houses supernatural objects that the Regents, an Authority above and outside any government, have collected over the centuries. Their new assignment: retrieve lost objects called Artifacts.",
             "choices": ["Stargate SG-1", "Warehouse 13", "Dark Matter"],
             //location of answer in choices array
             "answer": 1,
@@ -340,6 +340,7 @@ $(document).ready(function () {
             if (counter === 0) {
                 clearInterval(clock);
                 console.log("timeout");
+                $('#question-area').off('click');
 
                 document.querySelector('.correctCnt').innerHTML = correctAnswers;
                 document.querySelector('.incorrectCnt').innerHTML = incorrectAnswers;
@@ -401,7 +402,7 @@ $(document).ready(function () {
 
         $('#question-area').off('click');
 
-        console.log("test");
+        console.log("------answer selection-----");
 
         var answerId = $(this).attr("indexnum");
         answerId = parseInt(answerId);
@@ -411,19 +412,20 @@ $(document).ready(function () {
         var correctAnswerId = questions[questionId].answer;
 
         if (answerId === correctAnswerId) {
+            console.log("correct answer");
             $(this).addClass("list-group-item-success").append("<span class='badge'>&#10004;</span>");
             correctAnswers++;
             //document.querySelector('.question-text').innerHTML = "CORRECT";
         } else {
+            console.log("wrong answer");
             $(this).addClass("list-group-item-danger").append("<span class='badge'>&#10008;</span>");
             incorrectAnswers++;
             //document.querySelector('.question-text').innerHTML = "WRONG";
             // Highlight Correct Answer
             $('.answer[indexnum=' + correctAnswerId + ']').addClass('list-group-item-success').append("<span class='badge'>Correct Answer</span>");
-
         }
 
-        setTimeout(nextQuestion, 3000);
+        setTimeout(nextQuestion, 9000);
         //nextQuestion();
 
     }

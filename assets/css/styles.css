@@ -36,15 +36,10 @@ body {
     text-align: center;
 }
 
-.character-details-box {
-    border: 1px solid #ddd;
-    height: 122px;
-    border-radius: 7px;
-    margin-bottom: 10px;
-}
 
 .jumbotron h1 {
     font-family: 'Paytone One', sans-serif;
+    margin-top: 10px;
 }
 
 .question-block {
@@ -56,3 +51,11 @@ body {
     font-size: 25px;
     text-align: center;
 }
+
+.jumbotron {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.list-group {margin-bottom: 0;}
